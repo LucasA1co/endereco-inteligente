@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>endereco inteligente</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <main class="container">
+    <h1>Cadastro de Endereço</h1>
+
+    <form id="form-endereco" novalidate>
+      <div class="field">
+        <label for="cep">CEP <span class="required">*</span></label>
+        <input id="cep" name="cep" type="text" maxlength="9" inputmode="numeric"
+               placeholder="00000-000" autocomplete="postal-code" required>
+        <small class="hint">Formato: 00000-000</small>
+      </div>
+
+      <div class="field">
+        <label for="logradouro">Logradouro <span class="required">*</span></label>
+        <input id="logradouro" name="logradouro" type="text" minlength="5" placeholder="Av. Paulista" required>
+      </div>
+
+      <div class="row">
+        <div class="field small">
+          <label for="numero">Número <span class="required">*</span></label>
+          <input id="numero" name="numero" type="text" inputmode="numeric" placeholder="123" required>
+        </div>
+
+        <div class="field small">
+          <label for="uf">UF <span class="required">*</span></label>
+          <input id="uf" name="uf" type="text" maxlength="2" minlength="2" placeholder="SP" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="complemento">Complemento (opcional)</label>
+        <input id="complemento" name="complemento" type="text" placeholder="Apto, bloco, etc.">
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn">Cadastrar</button>
+      </div>
+    </form>
+  </main>
+
 </body>
 </html>
